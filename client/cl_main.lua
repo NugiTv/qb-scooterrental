@@ -39,14 +39,14 @@ CreateThread(function()
 	local scooterblip = AddBlipForCoord(Config.PedLocation)
 	SetBlipAsShortRange(blip, true)
 	SetBlipSprite(scooterblip, 348)
-	SetBlipColour(scooterblip, 60)
+	SetBlipDisplay(scooterblip, 60)
 	SetBlipScale(scooterblip, 0.7)
-	SetBlipDisplay(scooterblip, 6)
+	SetBlipColour(scooterblip, 6)
+    SetBlipAsShortRange(scooterblip, true)
 	BeginTextCommandSetBlipName('STRING')
 	AddTextComponentString('Scooter Rental')
 	EndTextCommandSetBlipName(scooterblip)
 end)
-
 
 CreateThread(function()
     exports['qb-target']:AddTargetModel(Config.PedModel, {
